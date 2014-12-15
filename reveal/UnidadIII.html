@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>UNIDEP - Arquitectura de Computadoras Unidad I</title>
+		<title>UNIDEP - Arquitectura de Computadoras Unidad III</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -43,24 +43,21 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<img src="img/SOL.jpg" ALIGN="center" width="600"
+					<img src="img/compu.jpg" ALIGN="center" width="900"
 					<b>
 					<h3>Curso de:</h3>
 					<h2>ARQUITECTURA DE COMPUTADORAS</h2>
-					<h3>Unidad I, Módulo III</h3>
+					<h3>Unidad 3, Módulo III</h3>
 					<p>
 						<small>Creado por:  Oscar  Martinez</a> / oscar . martinezcontreras @gmail . com</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>CONTENIDO</h2>
-					<p>
-						¿Qué es la Arquitectura de Computadoras?<br>
-						¿Qué es la Organización de Computadoras?<br>
-						¿Qué Diferencia existe entre las dos?
-						<img src="img/tarjeta.jpg" ALIGN="center" width="600"
-					</p>
+					<h3>Caracterización de los dispositivos de E/S </h3>
+					<h4>Conexión de dispositivos a una computadora </h4>
+					
+					<img src="img/cpu.jpg" ALIGN="center" width="600">
 
 					<aside class="notes">
 						Ejemplo para notas
@@ -69,135 +66,159 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
+
 					<section>
-						<h2>Concepto de Arquitectura</h2>
+						<h4>Caracterización de los dispositivos de E/S </h4>
+						<h3>Conexión por puerto o memoria </h3>
+						<FONT size= "5" color= "white" FACE="Times"> 
 						<p>
-							En el entorno informático proporciona una descripción de la construcción y distribución física de los componentes de la computadora. 
-
-							La arquitectura de una computadora explica la situación de sus componentes y permite determinar las posibilidades de que un sistema informático, con una determinada configuración, pueda realizar las operaciones para las que se va a utilizar.
- 						<a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Arquitectura de computadoras</h2>
-						<p> Cuando se describe una computadora se debe distinguir entre arquitectura y organización. La arquitectura de computadoras se refiere a los atributos de un sistema que son visibles a un programador, es decir aquellos atributos que tienen un impacto directo en la ejecución lógica de un programa. Ejemplos de atributos arquitectónicos: Conjunto de instrucciones, número de bits usados para representar datos, mecanismos de entrada salida y técnicas de direccionamiento de memoria.
-							<a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</p>
-					</section>
-					<section>
-						<h3> Organización de computadoras  </h3>
-
-						<p> Se refiere a las unidades funcionales y sus interconexiones, que materializan especificaciones arquitectónicas. Ejemplos de atributos de organización: son los detalles del hardware transparentes para el programador, tales como señales de control, interfaces entre la computadora y los periféricos y la tecnología de memoria utilizada.
-					<img src="img/foto.jpg" ALIGN="center" width="700"
-						</p>
+						Para iniciar una operación de E/S, el CPU tiene que escribir sobre los registros (datos, control, estado) los datos de la operación a través de una dirección de E/S o de memoria asignada únicamente al controlador.
+						El modelo de dispositivos por puerto es clásico de las arquitecturas Intel.
+						Cuando se instala un dispositivo, a su controlador se le asigna un puerto de E/S, una interrupción de hardware y un vector de interrupción.
+						En una operación de E/S el CPU la ejecuta operaciones del tipo portin o portout con la dirección del puerto del dispositivo y con parámetros para indicar que puerto se desea manipular.
+						El problema de este tipo de direccionamiento es que exige conocer las direcciones de E/S y programar las instrucciones especiales de E/S, lo que es significativamente distinto del modelo de memoria.
+						El modelo proyectado en memoria asigna a cada dispositivo de E/S un rango de direcciones de memoria a través de las cuales se escribe sobre los registros del controlador
+						No hay instrucciones específicas de E/S, sino que las operaciones se llevan a cabo usando instrucciones máquina del manejo de memoria.
+						Mapa único de direcciones de memoria
+						Se reserva una zona de memoria física para asignar las direcciones de E/S.
+ 					</Font>
+ 				</p>
 					</section>
 
 					<section>
-						<h3 "color= blue"> Ejemplo de Arquitectura y Organización </h3>
+						<h4>Caracterización de los dispositivos de E/S </h4>
+						<h3>Direcciones de E/S de algunos controladores en una PC con WinXP </h3>
+
+						<img src="img/informa.jpg" ALIGN="center" width="700">
+					</section>
+
+					<section>
+						<h4>Caracterización de los dispositivos de E/S </h4>
+						<h3> Dispositivos de bloques y caracteres </h3>
+
+						<p> Dispositivos de bloque:
+							Acceso a nivel de bloque, el cual puede ser secuencial o aleatorio.
+							Operaciones: leer, escribir, buscar, …, etc.
+							E/S directa o a través del servidor de archivos.
+							Ejemplo: discos y cintas.
+							Dispositivos de caracter:
+							Acceso a nivel carácter, el cual también puede ser secuencial o aleatorio.
+							Operaciones: get, put, …, etc.
+							Existen bibliotecas para optimizar y dar forma a este tipo de accesos (edición de línea).
+							Ejemplo: terminales, tarjetas de red, impresoras, módems, etc.
+						</p>
+					</section>
+
+					<section>
+						<h4> Caracterización de los dispositivos de E/S </h4>
+						<h3> E/S programada </h4>
+
+						<p> La transferencia de información entre un periférico y el procesador se realiza mediante la ejecución de una instrucción de E/S.
+							El procesador es el responsable de extraer o enviar datos entre la memoria y el controlador de dispositivo, lo cual implica que el proceso tiene que esperar mientras se realiza la transferencia.
+							Se hace un muestreo periódico de los dispositivos para determinar su estado:
+							Listo, ocupado, error
+							Se hace un ciclo de espera activa para los dispositivos de E/S.
+							Ventaja: no hay gasto de tiempo de gestión de interrupción.
+							Desventaja: consume mucha CPU para dispositivos poco ocupados.
+							Aplicación:
+							Hardware sin interrupciones
+							Programas de control de canales de E/S
+							</p>
 						
-						<div align="center">
-						<FONT size= "5" color= "white" FACE="Helvetica">
-						<p> Por poner un ejemplo, una cuestión de arquitectura es si la computadora tendrá la instrucción de multiplicar. 
-							Una cuestión de organización es si esa instrucción será implementada por una unidad especializada en multiplicar o por un mecanismo que haga un uso iterativo de la unidad de suma del sistema.
+					</section>
+				</section>
+
+				<section>
+					<h4> Caracterización de los dispositivos de E/S </h4>
+					<h3> E/S por interrupciones </h3>
+					<p>
+						El procesador envía la orden de E/S al controlador del dispositivo y no espera, se dedica a otras tareas hasta que le llega una interrupción del dispositivo que indica que se ha realizado la operación solicitada.
+						El gestor de interrupciones recibe y maneja la interrupción
+						Enmascarables para ignorar o retrasar interrupciones
+						El vector de interrupción tiene las direcciones de memoria de los manejadores de interrupción.
+						Se procesan según distintas políticas
+						Prioridad, FIFO, etc.
+						Algunas interrupciones no se pueden enmascarar (Ej. reset)
+						Los mecanismos de interrupción también se utilizan para el manejo de excepciones (Ej. Instrucción Errónea)
+
+					</p>
+				</section>
+
+				<section>
+					<h4> Caracterización de los dispositivos de E/S </h4>
+					<h3> Rutinas de tratamiento de interrupción</h3>
+					<p>
+						Suelen tener dos partes:
+						Una genérica y otra particular para el dispositivo
+						La parte genérica hace:
+						Capturar la interrupción
+						Salvaguardar el estado del procesador
+						Activar la rutina de manejo de interrupción
+						Indicar al planificador que debe poner “lista” la rutina particular.
+						Desactivar la interrupción
+						Restaurar el estado del procesador
+						Cesión de control
+						La parte correspondiente a lo particular del dispositivo contiene el manejador que el fabricante desarrolló para manipular su dispositivo.
+					</p>
+				
+				</section>
+
+				<section>
+					<h4> Caracterización de los dispositivos de E/S </h4>
+					<h3> Interrupciones asociadas a algunos controladores en una PC </h3>
+					<img src="img/control.jpg" ALIGN="center" width="700">
+				</section>
+
+				<section>
+					<h4> Caracterización de los dispositivos de E/S </h4>
+					<h3> Mecanismos de incremento de prestaciones </h3>
+					<p>
+					Acceso directo a memoria (DMA)
+					Se utiliza para evitar la E/S programada de grandes bloques de datos.
+					Necesita un controlador con DMA
+					Evita el uso del CPU transfiriendo los datos directamente entre los dispositivos de E/S y la memoria.
+					Básico para aprovechar el CPU en un sistema multiprogramado, ya que libera tiempo del CPU que puede 
+					ser utilizado para ejecutar otros programas.
+					</p>
+				<img src="img/memoria.jpg" ALIGN="center" width="700">
+				</section>
+
+				<section>
+					<h2> Arquitectura del sistema de E/S</h2>
+					<h3> Estructura y componentes </h3>
+					<p>
+						<FONT size= "5" color= "white" FACE="Helvetica"> 
+					Interfaz del SO para E/S
+					Proporciona servicios de E/S síncrona y asíncrona a las aplicaciones y una interfaz homogénea ocultando los detalles de bajo nivel.
+					Sistemas de archivos.
+					Permite acceder a los manejadores de dispositivos de almacenamiento de forma transparente
+					Gestor de redes
+					Permite acceder a los manejadores de cada tipo en particular de forma transparente.
+					Gestor de bloques
+					Admite únicamente operaciones a nivel bloque
+					Manejadores de dispositivo.
+					Da operaciones de alto nivel sobre los dispositivos y las traducen a su código de control particular.
+					</p>
+				</font>
+				<img src="img/interfaz.jpg" ALIGN="center" width="600">
+				</section>
+
+				<section>
+					<h3> Arquitectura del sistema de E/S</h3>
+					<h5> Estructuración del SW de E/S y flujo de una operación de E/S </h5>
 					
-							Muchos fabricantes de computadoras ofrecen una familia de modelos, todos con la misma arquitectura pero con diferencias en la organización.
-						</p>
-						<Br>
-							<p>
-							Una arquitectura puede sobrevivir muchos años, pero su organización cambia con la evolución de la tecnología. La arquitectura de la IBM Sistema 370 apareció por primera vez en 1970 e incluía varios modelos. Se podía comprar un modelo barato y lento y si la demanda se incrementaba, se podía cambiar a un modelo más caro y rápido sin tener que abandonar el software que ya se había desarrollado.
-						</p>
-						</div>
-						<img src="img/eniac.jpg" ALIGN="center" width="600"
-					</section>
-					</font>
-						</section>
-
-					<!-- Ejemplo para insertar un flecha con vinculo
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);"
-						</a>  -->
-		
-					<section>
-						<h3> Las funciones básicas que una  
-							<Br>
-							computadora puede llevar a cabo son: </h3>
-						<p> 
-						<h4> 
-							<UL>
-							<LI> Procesamiento de datos
-							<LI> Almacenamiento de datos
-							<LI> Transferencia de datos
-							<LI> Control 
-							</UL>
-							</h4>
-						
-							<FONT size= "5" color= "white" FACE="Helvetica">
-							La computadora es una entidad que interactúa de alguna manera con su entorno externo. En general, todas sus conexiones con el exterior pueden ser clasificadas como dispositivos periféricos o líneas de comunicación. <b>  Hay cuatro componentes estructurales principales: </b>
-							</FONT>
-
-						</p>
-						<img src="img/procesa.jpg" ALIGN="center" width="600">
-					</section>
-
-				<section>
-					<h3>Hay cuatro componentes estructurales principales:</h3>
-					<p>
-						UNIDAD CENTRAL DE PROCESAMIENTO (CPU):
-						Controla el funcionamiento de la computadora y lleva a cabo las funciones de procesamiento de datos. Frecuentemente se le llama procesador
-						MEMORIA PRINCIPAL: Almacena datos.
-						E/S: transfiere datos entre la computadora y el exterior.
-						SISTEMA DE INTERCONEXION (Bus del sistema): Es un mecanismo que proporciona la comunicación entre la CPU, la memoria y E/S.
-					</p>
-					<img src="img/componentes.jpg" ALIGN="center" width="800">
+				<img src="img/proceso.jpg" ALIGN="center" width="500">
 				</section>
 
 				<section>
-					<h1>CONCLUSION</h1>
-					<h2>La arquitectura de computadoras </h2>
-					<p>
-						La arquitectura de computadoras es el diseño conceptual y la estructura operacional fundamental de un sistema de computadora. 
-Es decir, es un modelo y una descripción funcional de los requerimientos y las implementaciones de diseño para varias partes de una computadora, con especial interés en la forma en que la unidad central de proceso (CPU) trabaja internamente y accede a las direcciones de memoria.
-
-					</p>
+					<h3> Arquitectura del sistema de E/S</h3>
+					<h5> Diagrama de flujo con las operaciones de un manejador </h5>
+					
+				<img src="img/diagrama.jpg" ALIGN="center" width="500">
 				</section>
 
-				<section>
-					<h2> MODELOS DE ARQUITECTURA DE COMPUTADORAS </h2>
-					<p>
-						<UL>
-							<LI> Clásicas
-							<LI> Segmentadas
-							<LI> Multiprocesamiento
-							</UL>
-					</p>
-					<img src="img/modelos.jpg" ALIGN="center" width="700">
-				</section>
 
-				<section>
-					<h2>S I G U E ...</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
 
 				<section data-markdown>
 					<script type="text/template">

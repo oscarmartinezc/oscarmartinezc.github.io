@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>UNIDEP - Arquitectura de Computadoras Unidad I</title>
+		<title>UNIDEP - Arquitectura de Computadoras Unidad II</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -46,20 +46,21 @@
 					<img src="img/SOL.jpg" ALIGN="center" width="600"
 					<b>
 					<h3>Curso de:</h3>
-					<h2>ARQUITECTURA DE COMPUTADORAS</h2>
-					<h3>Unidad I, Módulo III</h3>
+					<h2>SISTEMAS OPERATIVOS</h2>
+					<h3>Unidad II, ENTRADA - SALIDA</h3>
 					<p>
 						<small>Creado por:  Oscar  Martinez</a> / oscar . martinezcontreras @gmail . com</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>CONTENIDO</h2>
+					<h4>SISTEMAS OPERATIVOS</h4>
+					<h2>ENTRADA - SALIDA</h2>
 					<p>
-						¿Qué es la Arquitectura de Computadoras?<br>
-						¿Qué es la Organización de Computadoras?<br>
-						¿Qué Diferencia existe entre las dos?
-						<img src="img/tarjeta.jpg" ALIGN="center" width="600"
+						- Introducción -<Br>
+						- Caracterización de los dispositivos de Entrada/Salida -<Br>
+						- Arquitectura del sistema de Entrada/Salida -
+						<img src="img/SO.jpg" ALIGN="center" width="600">
 					</p>
 
 					<aside class="notes">
@@ -70,123 +71,122 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Concepto de Arquitectura</h2>
+						<h2>Introducción</h2>
 						<p>
-							En el entorno informático proporciona una descripción de la construcción y distribución física de los componentes de la computadora. 
-
-							La arquitectura de una computadora explica la situación de sus componentes y permite determinar las posibilidades de que un sistema informático, con una determinada configuración, pueda realizar las operaciones para las que se va a utilizar.
- 						<a href="#" class="navigate-down">down</a>.
+							
+							El corazón de una computadora lo constituye el CPU.
+							Sin embargo, no serviría de nada sin:
+							Dispositivos de almacenamiento secundario (discos) y terciario (cintas, CD, DVD).
+							Dispositivos periféricos que le permiten interactuar con el usuario
+							Generalmente están fuera de la computadora y se conectan a ella mediante cables
+							Son los teclados, ratones, micrófonos, cámaras y cualquier otro dispositivo de E/S que se nos ocurra conectar a la computadora.
 						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Arquitectura de computadoras</h2>
-						<p> Cuando se describe una computadora se debe distinguir entre arquitectura y organización. La arquitectura de computadoras se refiere a los atributos de un sistema que son visibles a un programador, es decir aquellos atributos que tienen un impacto directo en la ejecución lógica de un programa. Ejemplos de atributos arquitectónicos: Conjunto de instrucciones, número de bits usados para representar datos, mecanismos de entrada salida y técnicas de direccionamiento de memoria.
-							<a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</p>
-					</section>
-					<section>
-						<h3> Organización de computadoras  </h3>
-
-						<p> Se refiere a las unidades funcionales y sus interconexiones, que materializan especificaciones arquitectónicas. Ejemplos de atributos de organización: son los detalles del hardware transparentes para el programador, tales como señales de control, interfaces entre la computadora y los periféricos y la tecnología de memoria utilizada.
-					<img src="img/foto.jpg" ALIGN="center" width="700"
-						</p>
-					</section>
-
-					<section>
-						<h3 "color= blue"> Ejemplo de Arquitectura y Organización </h3>
 						
-						<div align="center">
-						<FONT size= "5" color= "white" FACE="Helvetica">
-						<p> Por poner un ejemplo, una cuestión de arquitectura es si la computadora tendrá la instrucción de multiplicar. 
-							Una cuestión de organización es si esa instrucción será implementada por una unidad especializada en multiplicar o por un mecanismo que haga un uso iterativo de la unidad de suma del sistema.
-					
-							Muchos fabricantes de computadoras ofrecen una familia de modelos, todos con la misma arquitectura pero con diferencias en la organización.
-						</p>
-						<Br>
-							<p>
-							Una arquitectura puede sobrevivir muchos años, pero su organización cambia con la evolución de la tecnología. La arquitectura de la IBM Sistema 370 apareció por primera vez en 1970 e incluía varios modelos. Se podía comprar un modelo barato y lento y si la demanda se incrementaba, se podía cambiar a un modelo más caro y rápido sin tener que abandonar el software que ya se había desarrollado.
-						</p>
-						</div>
-						<img src="img/eniac.jpg" ALIGN="center" width="600"
+							<img src="img/dispo.jpg" ALIGN="center" width="600">
+						</a>
 					</section>
-					</font>
-						</section>
-
-					<!-- Ejemplo para insertar un flecha con vinculo
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);"
-						</a>  -->
-		
 					<section>
-						<h3> Las funciones básicas que una  
-							<Br>
-							computadora puede llevar a cabo son: </h3>
+						<h4>Introducción</h4>
+						<h3>Clasificación de los dispositivos de E/S </h3>
 						<p> 
-						<h4> 
-							<UL>
-							<LI> Procesamiento de datos
-							<LI> Almacenamiento de datos
-							<LI> Transferencia de datos
-							<LI> Control 
-							</UL>
-							</h4>
-						
-							<FONT size= "5" color= "white" FACE="Helvetica">
-							La computadora es una entidad que interactúa de alguna manera con su entorno externo. En general, todas sus conexiones con el exterior pueden ser clasificadas como dispositivos periféricos o líneas de comunicación. <b>  Hay cuatro componentes estructurales principales: </b>
-							</FONT>
-
-						</p>
-						<img src="img/procesa.jpg" ALIGN="center" width="600">
+							Periféricos
+							Legibles para el usuario
+							Permiten la comunicación entre el usuario y la computadora, ya sea de entrada (ratón, teclado, etc.) o salida (pantalla, impresora, etc.).
+							Dispositivos de almacenamiento
+							Legibles para la máquina
+							Proporcionan almacenamiento no volátil de datos para abastecer a los programas que ejecuta el CPU.
+							Dispositivos de comunicaciones
+							Permiten conectar a la computadora con otras computadoras a través de una red. 
+							Los dos dispositivos más importantes son los módem y las tarjetas de interfaz de red. 
+					</p>
+					<img src="img/moni.jpg" ALIGN="center" width="600">
 					</section>
 
-				<section>
-					<h3>Hay cuatro componentes estructurales principales:</h3>
-					<p>
-						UNIDAD CENTRAL DE PROCESAMIENTO (CPU):
-						Controla el funcionamiento de la computadora y lleva a cabo las funciones de procesamiento de datos. Frecuentemente se le llama procesador
-						MEMORIA PRINCIPAL: Almacena datos.
-						E/S: transfiere datos entre la computadora y el exterior.
-						SISTEMA DE INTERCONEXION (Bus del sistema): Es un mecanismo que proporciona la comunicación entre la CPU, la memoria y E/S.
+					<section>
+						<h4>Introducción</h4>
+						<h3> Velocidad de los dispositivos  </h3>
+
+						<p> El gran problema de todos los dispositivos de E/S es que son muy lentos
+						El CPU procesa instrucciones a mas de 1 GHz y la memoria RAM tiene un tiempo de acceso de nanosegundos.
+						Los dispositivos de E/S más rápidos tienen una velocidad del orden de los milisegundos.
+						Esta diferencia en la velocidad de acceso, y el hecho de que las aplicaciones son cada vez más interactivas y necesitan más E/S, hace que los sistemas de E/S sean el cuello de botella más importante de los sistemas. Por ello los SO dedican un gran esfuerzo en desarrollar y optimizar los mecanismos de E/S.
+
+					<img src="img/velocidad.jpg" ALIGN="center" width="600"
+						</p>
+						
+					</section>
+					<section>
+						<h4>Introducción</h4>
+						<h3>El SO debe controlar el funcionamiento de todos los dispositivos de E/S para alcanzar los siguientes objetivos: </h3>
+						<p> Facilitar el manejo de los dispositivos periféricos. Para ello debe ofrecer una interfaz entre los dispositivos y el resto del sistema que sea sencilla y fácil de utilizar.
+						Optimizar la E/S del sistema, proporcionando mecanismos de incremento de prestaciones donde sea necesario.
+						Proporcionar dispositivos virtuales que permitan conectar cualquier tipo de dispositivo físico sin que sea necesario remodelar el sistema de E/S del SO.
+						Permitir la conexión de dispositivos nuevos de E/S, solventando de forma automática su instalación usando mecanismos del tipo plug&play.
 					</p>
-					<img src="img/componentes.jpg" ALIGN="center" width="800">
+					</section>
 				</section>
 
 				<section>
-					<h1>CONCLUSION</h1>
-					<h2>La arquitectura de computadoras </h2>
+					<h3>Caracterización de los dispositivos de E/S</h3>
+					<h4>La visión del sistema de E/S puede ser muy distinta dependiendo del nivel de detalle necesario en su estudio.</h4>
 					<p>
-						La arquitectura de computadoras es el diseño conceptual y la estructura operacional fundamental de un sistema de computadora. 
-Es decir, es un modelo y una descripción funcional de los requerimientos y las implementaciones de diseño para varias partes de una computadora, con especial interés en la forma en que la unidad central de proceso (CPU) trabaja internamente y accede a las direcciones de memoria.
-
+						Para los programadores, el sistema de E/S es una caja negra que lee y escribe datos en dispositivos externos a través de una funcionalidad bien definida.
+						Para los fabricantes de dispositivos, un dispositivo es un instrumento muy complejo que incluye cientos de miles de componentes electrónicos o electro-mecánicos.
+						Los diseñadores de SO se encuentran en un lugar intermedio entre los dos anteriores
+						Les interesa la funcionalidad del dispositivo, aunque a un nivel de detalle mucho más grande que la funcionalidad que espera el programador de aplicaciones.
+						También les interesa conocer la interfaz física de los dispositivos y su comportamiento interno para poder optimizar los métodos de acceso a los mismos.
 					</p>
 				</section>
 
 				<section>
-					<h2> MODELOS DE ARQUITECTURA DE COMPUTADORAS </h2>
+					<h4>Caracterización de los dispositivos de E/S</h4>
+					<h3>Conexión de dispositivos del sistema de E/S</h3>
 					<p>
-						<UL>
-							<LI> Clásicas
-							<LI> Segmentadas
-							<LI> Multiprocesamiento
-							</UL>
+					<b> En el modelo de un periférico se distinguen dos elementos: </b>
 					</p>
-					<img src="img/modelos.jpg" ALIGN="center" width="700">
+					<p>
+					Periféricos o dispositivos de E/S
+					Elementos que se conectan al CPU a través de la unidades de E/S.
+					Son el componente mecánico que se “conecta” a la computadora.
+					Controladores de dispositivos o unidades de E/S
+					Se encargan de hacer la transferencia de información entre la memoria principal y los periféricos.
+					Son el componente electrónico a través del cual se conecta el dispositivo de E/S.
+					</p>
+					<p>
+					<b>Tienen una conexión al bus de la computadora y otra para el dispositivo (generalmente mediante cables internos o externos).</b>
+					</p>
 				</section>
 
 				<section>
-					<h2>S I G U E ...</h2>
+					<h4>Caracterización de los dispositivos de E/S</h4>
+					<h3>Controladores</h3>
+					<FONT size= "6" color= "white" FACE="Helvetica"> 
+					<p>
+						Son muy variados, casi tanto como los dispositivos de E/S
+						Muchos de ellos pueden controlar múltiples dispositivos (los de disco).
+						Otros, como los canales de E/S, incluyen su propia CPU y bus para controlar la E/S por programa y evitar interrupciones en el CPU de la computadora.
+						En los últimos años ha existido un esfuerzo importante de estandarización de los dispositivos, lo que permite usar un mismo controlador para dispositivos de distintos fabricantes.
+						El controlador es el componente más importante desde el punto de vista del SO, ya que constituye la interfaz del dispositivo con el bus de la computadora y es el componente que se ve desde el CPU.
+						Su programación se lleva a cabo mediante una interfaz a muy bajo nivel que proporciona acceso a una serie de registros del controlador.
+						Las características del controlador son muy importantes, ya que definen el aspecto del periférico para el SO.
+						Fundamental: Dirección de E/S, Unidad de transferencia e interacción computadora-controlador.
+					</p>
+				</Font>
+				</section>
+
+
+
+
+
+
+
+				<section>
+					<h2>HASTA AQUI LLEGA...pendientes subir mas información</h2>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>1.- </li>
+						<li>2.- </li>
+						<li>3.- </li>
+						<li>4.- </li>
 					</ul>
 				</section>
 
